@@ -1,0 +1,25 @@
+{
+  "key_env": "PGFAKE_KEY",
+  "rules": {
+    "users.name": {
+      "transformer": "full_name"
+    },
+    "users.email": {
+      "transformer": "email",
+      "scope": "user_email"
+    },
+    "users.phone": {
+      "transformer": "phone"
+    },
+    "users.company": {
+      "transformer": "company"
+    },
+    "users.profile": {
+      "transformer": "json",
+      "paths": {
+        "name": { "transformer": "first_name" },
+        "settings.phone": { "transformer": "phone" }
+      }
+    }
+  }
+}
